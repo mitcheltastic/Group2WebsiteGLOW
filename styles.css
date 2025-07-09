@@ -360,30 +360,63 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     color: var(--red-800);
 }
 
 @media (min-width: 768px) {
     .contact-info {
         flex-direction: row;
-        gap: 2rem;
+        align-items: flex-start;
+        gap: 3rem;
     }
 }
 
-/* ===== NEW EMAIL LINK STYLE ===== */
+/* ===== NEW CONTACT STYLES ===== */
+.contact-person {
+    text-align: center;
+}
+
+.contact-person h4 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    color: var(--red-900);
+}
+
 .contact-link {
-    color: inherit;
+    display: block;
+    color: var(--red-800);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
+    transition: color 0.3s ease;
+    margin-bottom: 0.5rem;
 }
 
 .contact-link:hover {
     color: var(--red-600);
     text-decoration: underline;
 }
-/* ===== END OF NEW STYLE ===== */
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--red-800);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--red-600);
+}
+
+.social-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+/* ===== END OF NEW STYLES ===== */
 
 
 /* Footer */
