@@ -569,6 +569,161 @@ textarea {
     display: none;
 }
 
+@media (max-width: 680px) {
+    /* --- Show the hamburger button on mobile --- */
+    #mobile-nav-toggle {
+        display: block;
+        position: relative;
+        z-index: 9999;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+    }
+
+    #mobile-nav-toggle .hamburger-line {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px 0;
+        background: var(--brand-primary);
+        transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    /* --- Hide the desktop nav links --- */
+    .nav-links {
+        position: fixed;
+        inset: 0 0 0 30%; /* From top 0, right 0, bottom 0, left 30% */
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        padding: 2rem;
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        transform: translateX(100%);
+        transition: transform 0.4s ease-out;
+    }
+
+    /* --- Show the mobile nav when active --- */
+    .nav-links[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    /* --- Animate hamburger to an 'X' --- */
+    #mobile-nav-toggle[aria-expanded="true"] .hamburger-line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    #mobile-nav-toggle[aria-expanded="true"] .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    #mobile-nav-toggle[aria-expanded="true"] .hamburger-line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* =================================
+|   CONTACT PAGE & FORM STYLES    |
+================================== */
+
+.contact-subheading {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    font-size: 1.1rem;
+}
+
+.contact-form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-primary);
+    box-shadow: var(--shadow-lg);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-primary);
+    border-radius: 0.5rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 3px rgba(255, 111, 97, 0.3); /* Glow effect */
+}
+
+textarea {
+    resize: vertical; /* Allow users to resize the textarea vertically */
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--brand-gradient);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.submit-button:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* For success/error messages after submission */
+#form-status {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: none; /* Hidden by default */
+}
+
+#form-status.success {
+    background-color: #d4edda;
+    color: #155724;
+    display: block;
+}
+
+#form-status.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    display: block;
+}
+
+
+/* =================================
+|   MOBILE NAVIGATION STYLES      |
+================================== */
+
+/* Hide the hamburger on desktop */
+#mobile-nav-toggle {
+    display: none;
+}
+
 @media (max-width: 768px) {
     /* --- Show the hamburger button on mobile --- */
     #mobile-nav-toggle {
