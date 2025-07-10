@@ -10,6 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .video-container {
+            text-align: center; /* Centers the iframe */
+            margin-top: 2rem;
+        }
+        .video-container iframe {
+            max-width: 100%; /* Makes the video responsive */
+            border: 0;
+            border-radius: 8px; /* Optional: adds rounded corners */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
+        }
+    </style>
 </head>
 <body>
 
@@ -45,11 +58,9 @@
                     <div class="card-section">
                         <h4 class="card-subheading">Education</h4>
                         <p class="card-text"><strong>B.E. in Telecommunication Engineering</strong><br>
-                            <!-- MODIFIED LINE -->
                             <span class="telkom-university">Telkom University</span> (2023 - now)
                         </p>
                     </div>
-                    <!-- ... rest of the card ... -->
                     <div class="card-section">
                         <h4 class="card-subheading">Experience</h4>
                         <p class="card-text"><strong>Backend Developer</strong> at BiruLangit<br><span class="text-sm">2 years - Specialized in Backend Development and Databases Integration.</span></p>
@@ -67,11 +78,9 @@
                     <div class="card-section">
                         <h4 class="card-subheading">Education</h4>
                         <p class="card-text"><strong>B.E. in Telecommunication Engineering</strong><br>
-                            <!-- MODIFIED LINE -->
                             <span class="telkom-university">Telkom University</span> (2023 - now)
                         </p>
                     </div>
-                    <!-- ... rest of the card ... -->
                     <div class="card-section">
                         <h4 class="card-subheading">Experience</h4>
                         <p class="card-text"><strong>GIS Engineer</strong> at MBC Lab<br><span class="text-sm">1 year - working in Mapping & Navigation.</span></p>
@@ -89,11 +98,9 @@
                     <div class="card-section">
                         <h4 class="card-subheading">Education</h4>
                         <p class="card-text"><strong>B.E. in Software Engineering</strong><br>
-                            <!-- MODIFIED LINE -->
                             <span class="icats-university">i-CATS University College</span> (2024 - now)
                         </p>
                     </div>
-                    <!-- ... rest of the card ... -->
                     <div class="card-section">
                         <h4 class="card-subheading">Experience</h4>
                         <p class="card-text"><strong>Game Developer</strong> self-employed<br><span class="text-sm">4 years - Expertise in LUA Programming Language and 3D Modeling.</span></p>
@@ -106,7 +113,20 @@
 
             </div>
         </section>
-    </main>
+
+        <section class="documentation-section fade-in-section">
+            <h2 class="main-heading" style="text-align: center; margin-top: 2rem;">Our Documentation</h2>
+            <div class="video-container">
+                <iframe 
+                    src="https://drive.google.com/file/d/1WTKGGpnly1tQ_e4jbOF8bgvbu-HHDMLq/preview" 
+                    width="854" 
+                    height="480" 
+                    allow="autoplay; fullscreen">
+                </iframe>
+            </div>
+        </section>
+
+        </main>
 
     <footer class="site-footer">
         <div class="container footer-content">
