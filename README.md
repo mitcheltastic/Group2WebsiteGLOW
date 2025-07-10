@@ -19,7 +19,7 @@ This website is structured using basic frontend technologies to provide an engag
 - **Static Assets** – Images and logos in the `lib/` folder
 
 ## 📁 Folder Structure
-
+``` 
 Group2WebsiteGLOW-main/
 ├── index.html
 ├── our-team.html
@@ -30,7 +30,7 @@ Group2WebsiteGLOW-main/
 ├── script.js
 └── lib/
 ├── *.jpg / *.png (Images, Logos)
-
+``` 
 ## 🖼️ Screenshots
 
 _Add screenshots of the homepage, team page, and contact form here if available._
