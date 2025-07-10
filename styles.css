@@ -123,111 +123,158 @@ section { margin-bottom: 6rem; }
     z-index: 10;
 }
 
-/* THIS IS THE MODIFIED REPLACEMENT */
-.nav-links {
-    display: flex; /* Kept as flex for easy column layout */
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    list-style: none;
-    padding: 4rem 2rem; /* Generous padding for the pop-down */
-    margin: 0;
-
-    /* Positioning for the "pop-down" effect */
-    position: absolute;
-    top: 100%; /* Position it right below the header */
-    left: 0;
-    right: 0;
-
-    background-color: var(--bg-primary);
-    border-bottom: 2px solid var(--border-primary);
-    box-shadow: var(--shadow-md);
-
-    /* Hide it off-screen by default */
-    transform: translateY(-120%);
-    transition: transform 0.4s ease-in-out;
-}
-
 .nav-links li:last-child {
     margin-left: 0; /* Remove the desktop-specific margin */
     margin-top: 1rem; /* Add some space above the contact button on mobile */
 }
 
-/* =========================================
-| RESPONSIVE NAVIGATION STYLES            |
-=========================================== */
+/* NAVIGATION - FIXED & CLEANED */
 
-/* --- Style the Mobile Menu Button (Hamburger) --- */
+.site-header {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all var(--transition-speed) ease;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    list-style: none;
+    transition: transform 0.4s ease;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 1rem;
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: var(--brand-gradient);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.contact-link {
+    background: var(--brand-primary);
+    color: #fff !important;
+    padding: 0 1.25rem;
+    border-radius: 999px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin-top: -18px;
+}
+
+.contact-link:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* --- Hamburger Button --- */
 #mobile-nav-toggle {
-    display: none; /* Hidden by default, shown via media query */
-    z-index: 9999;
-    background: transparent;
-    border: none;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
     cursor: pointer;
-    padding: 0.5rem;
+    border: none;
+    background: transparent;
+    z-index: 1100;
 }
 
 .hamburger-line {
-    display: block;
-    width: 25px;
+    width: 24px;
     height: 3px;
-    margin: 5px 0;
-    background-color: var(--brand-primary);
-    transition: all 0.3s ease-in-out;
+    background: var(--brand-primary);
+    margin: 4px 0;
+    transition: all 0.3s ease;
 }
 
-/* --- The "Open" State for the Menu (Toggled by JS) --- */
-.nav-open .nav-links {
-    transform: translateY(0); /* Bring the menu into view */
-}
-
-/* Animate the hamburger icon to an "X" when open */
-.nav-open #mobile-nav-toggle .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
-}
-.nav-open #mobile-nav-toggle .hamburger-line:nth-child(2) {
-    opacity: 0;
-}
-.nav-open #mobile-nav-toggle .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-}
-
-
-/* --- Media Query for Desktop Screens (768px and wider) --- */
-@media (min-width: 768px) {
-    #mobile-nav-toggle {
-        display: none; /* Hide the hamburger on desktop */
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 70%;
+        background-color: #fff;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transform: translateX(100%);
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
     }
 
-    .nav-links {
-        /* Revert all the mobile styles for desktop view */
-        position: static;
-        flex-direction: row;
-        width: 100%;
-        align-items: center;
-        padding: 0;
-        background-color: transparent;
-        border: none;
-        box-shadow: none;
-        transform: translateY(0); /* Reset transform */
+    .nav-links.open {
+        transform: translateX(0%);
+    }
+
+    #mobile-nav-toggle {
+        display: flex;
     }
 
     .nav-links li:last-child {
-        margin-left: auto; /* Restore the original margin rule */
-        margin-top: 0;
-    }
-}
-
-/* --- Media Query for Mobile Screens (Smaller than 768px) --- */
-@media (max-width: 767px) {
-    #mobile-nav-toggle {
-        display: block; /* Show the hamburger */
-        margin-left: auto; /* Push it to the right */
+        margin-top: 1rem;
     }
 
-    .nav-container {
-        /* Ensure logo and hamburger are spaced apart */
-        justify-content: space-between;
+    /* Hamburger animation to "X" */
+    #mobile-nav-toggle.active .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    #mobile-nav-toggle.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    #mobile-nav-toggle.active .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
     }
 }
 
@@ -241,15 +288,6 @@ section { margin-bottom: 6rem; }
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
-}
-
-.contact-link {
-    background-color: var(--brand-primary);
-    color: white !important;
-    padding: 18px 26px;
-    border-radius: 40px;
-    transition: transform 0.2s ease, background-color 0.3s ease;
-    font-size: 1rem;
 }
 
 .contact-link:hover {
@@ -559,101 +597,39 @@ textarea {
     display: block;
 }
 
+/* Styles for the new Instagram link */.social-link a {
+            display: flex;
+            align-items: center;
+            gap: 8px; /* space between icon and text */
+            text-decoration: none;
+            color: #333; /* Dark grey color for text */
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
 
-/* =================================
-|   MOBILE NAVIGATION STYLES      |
-================================== */
+        .social-link svg {
+            width: 20px;
+            height: 20px;
+            fill: #E1306C; /* Instagram gradient color */
+        }
 
-/* Hide the hamburger on desktop */
-#mobile-nav-toggle {
-    display: none;
-}
+        .social-link a:hover {
+            color: #E1306C; /* Change text color on hover */
+            text-decoration: none;
+        }
 
-@media (max-width: 680px) {
-    /* --- Show the hamburger button on mobile --- */
-    #mobile-nav-toggle {
-        display: block;
-        position: relative;
-        z-index: 9999;
-        background: transparent;
-        border: 0;
-        cursor: pointer;
-    }
+        .card-section.social-link {
+            margin-top: 10px;
+        }
 
-    #mobile-nav-toggle .hamburger-line {
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin: 5px 0;
-        background: var(--brand-primary);
-        transition: transform 0.4s ease, opacity 0.4s ease;
-    }
+        /* Styles for the lecturer section */
+        .lecturer-section {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem; /* Adds space between the lecturer card and the participant cards */
+        }
 
-    /* --- Hide the desktop nav links --- */
-    .nav-links {
-        position: fixed;
-        inset: 0 0 0 30%; /* From top 0, right 0, bottom 0, left 30% */
-        flex-direction: column;
-        justify-content: center;
-        gap: 2rem;
-        padding: 2rem;
-        background-color: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        transform: translateX(100%);
-        transition: transform 0.4s ease-out;
-    }
-
-    /* --- Show the mobile nav when active --- */
-    .nav-links[data-visible="true"] {
-        transform: translateX(0%);
-    }
-
-    /* --- Animate hamburger to an 'X' --- */
-    #mobile-nav-toggle[aria-expanded="true"] .hamburger-line:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-    #mobile-nav-toggle[aria-expanded="true"] .hamburger-line:nth-child(2) {
-        opacity: 0;
-    }
-    #mobile-nav-toggle[aria-expanded="true"] .hamburger-line:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-}
-
-/* Styles for the new Instagram link */
-.social-link a {
-    display: flex;
-    align-items: center;
-    gap: 8px; /* space between icon and text */
-    text-decoration: none;
-    color: #333; /* Dark grey color for text */
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.social-link svg {
-    width: 20px;
-    height: 20px;
-    fill: #E1306C; /* Instagram gradient color */
-}
-
-.social-link a:hover {
-    color: #E1306C; /* Change text color on hover */
-    text-decoration: none;
-}
-
-.card-section.social-link {
-    margin-top: 10px;
-}
-
-/* Styles for the lecturer section */
-.lecturer-section {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem; /* Adds space between the lecturer card and the participant cards */
-}
-
-.lecturer-card {
-    width: 100%;
-    max-width: 400px; /* Adjust the max-width as needed */
+        .lecturer-card {
+            width: 100%;
+            max-width: 400px; /* Adjust the max-width as needed */
 }

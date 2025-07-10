@@ -125,17 +125,36 @@ if (contactForm) {
         }
     });
 }
+document.addEventListener('DOMContentLoaded', function () {
+  const navToggle = document.getElementById('mobile-nav-toggle');  // the hamburger button
+  const navLinks = document.querySelector('.nav-links');           // the menu list
 
-const navToggle = document.getElementById('mobile-nav-toggle');
-const siteHeader = document.querySelector('.site-header');
-
-// 2. Add an event listener to the button to listen for a 'click'.
-navToggle.addEventListener('click', () => {
-    // 3. When clicked, add or remove the '.nav-open' class on the header.
-    // The CSS uses this class to show or hide the menu.
-    siteHeader.classList.toggle('nav-open');
-
-    // For accessibility, toggle the aria-expanded attribute.
+  // When the hamburger is clicked, toggle the menu
+  navToggle.addEventListener('click', function () {
     const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+    
+    // Show or hide menu
     navToggle.setAttribute('aria-expanded', !isExpanded);
+    navLinks.setAttribute('data-visible', !isExpanded);
+
+    // ✅ Add this: toggle CSS classes for animation
+    navToggle.classList.toggle('active');
+    navLinks.classList.toggle('open');
+  });
+
+  // When any link is clicked, close the mobile menu (only on mobile)
+  const links = document.querySelectorAll('.nav-link'); // selects all nav links
+
+  links.forEach(link => {
+    link.addEventListener('click', function () {
+      if (window.innerWidth < 768) {
+        navToggle.setAttribute('aria-expanded', 'false');
+        navLinks.setAttribute('data-visible', 'false');
+
+        // ✅ Also remove classes on close
+        navToggle.classList.remove('active');
+        navLinks.classList.remove('open');
+      }
+    });
+  });
 });
