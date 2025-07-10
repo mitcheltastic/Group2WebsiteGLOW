@@ -3,37 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Group 2 | GLOW 2025 Participants</title>
+    <title>Group 2 | GLOW 2025 Home</title>
     
-    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Custom Stylesheet -->
+    
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
 
-    <!-- Header & Navigation -->
     <header class="site-header">
         <nav class="container nav-container">
-            <a href="#" class="logo">GLOW 2025</a>
+            <a href="index.html" class="logo"><img src="lib/Logo.png" alt="CC - Class Logo" style="height: 40px;"></a>
+
+            <button id="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Menu</span> <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
             <ul class="nav-links">
-                <li><a href="#event" class="nav-link">The Event</a></li>
-                <li><a href="#team" class="nav-link">Our Team</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="https://io.telkomuniversity.ac.id/glow-2025-unlock-a-world-of-knowledge-innovation-and-cultural-discovery-at-telkom-university/" target="_blank" rel="noopener noreferrer" class="nav-link">GLOW Enrollment</a></li>
+                <li><a href="cc-glow.html" class="nav-link">CC-Course-Participant</a></li>
+                <li><a href="our-team.html" class="nav-link">Our Team</a></li>
+                <li><a href="contact.html" class="nav-link contact-link">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main class="container main-content">
 
-        <!-- Event Section -->
         <section id="event" class="event-section fade-in-section">
             <h1 class="main-heading">GLOW 2025: A Global Convergence</h1>
-            
             <div class="event-layout">
                 <div class="event-poster-container">
                     <img src="lib/GLOW.png" alt="GLOW 2025 Poster" class="event-poster">
@@ -53,128 +57,75 @@
                         <li>🇲🇾 <strong>Ts. Puan Rajina Binti M A Raj Mohamed</strong> – Universiti Tenaga Nasional (UNITEN), Malaysia</li>
                         <li>🇲🇾 <strong>Dr. Mohd Nur Ruzainy Bin Alwi</strong> – Universiti Tenaga Nasional (UNITEN), Malaysia</li>
                     </ul>
-                    <p>
-                        This program is designed to deepen our technical expertise while exposing us to diverse ways of thinking. Being part of GLOW connects us with a vibrant network of peers and mentors, allowing us to truly "GLOW up together."
-                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- Bridging Section -->
-        <section class="bridge-section fade-in-section">
-            <h2 class="bridge-heading">Forging Connections Across Cultures</h2>
-            <p>This event is more than just an academic program; it's a platform that has enabled us to forge meaningful cross-cultural connections. It is in this spirit of global collaboration that our team was formed. Meet the members who are turning shared knowledge into collective action.</p>
-        </section>
-
-        <!-- Team Section -->
-        <section id="team" class="team-section fade-in-section">
-            <h2 class="section-heading">Group 2 Members!</h2>
-            
-            <div class="team-grid">
-                
-                <!-- Member 1 Card -->
-                <div class="team-card">
-                    <img src="lib/Mitch.jpg" alt="Mitchel Affandi" class="member-photo">
-                    <h3 class="member-name">Mitchel Affandi</h3>
-                    <p class="member-title">Backend Developer</p>
-                    
-                    <div class="card-section">
-                        <h4 class="card-subheading">Education</h4>
-                        <p class="card-text"><strong>B.E. in Telecommunication Engineering</strong><br>Telkom University (2023 - now)</p>
-                    </div>
-
-                    <div class="card-section">
-                        <h4 class="card-subheading">Experience</h4>
-                        <p class="card-text"><strong>Backend Developer</strong> at BiruLangit<br><span class="text-sm">2 years - Specialized in Backend Development and Databases Integration.</span></p>
-                    </div>
-                    
-                    <a href="https://drive.google.com/file/d/1heiyxq5bs8Tuw9cf-GJFBpcIwPPc2WoI/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="resume-button">Download Resume</a>
-                </div>
-
-                <!-- Member 2 Card -->
-                <div class="team-card">
-                    <img src="lib/Bagas.jpg" alt="Bagas Wisesa" class="member-photo">
-                    <h3 class="member-name">Bagas Wisesa</h3>
-                    <p class="member-title">GIS Engineer</p>
-                    
-                    <div class="card-section">
-                        <h4 class="card-subheading">Education</h4>
-                        <p class="card-text"><strong>B.E. in Telecommunication Engineering</strong><br>Telkom University (2023 - now)</p>
-                    </div>
-
-                    <div class="card-section">
-                        <h4 class="card-subheading">Experience</h4>
-                        <p class="card-text"><strong>GIS Engineer</strong> at MBC Lab<br><span class="text-sm">1 year - working in the following sectors: Mapping & Navigation (providing smartphone integration and location tagging in photography)</span></p>
-                    </div>
-
-                    <a href="https://drive.google.com/file/d/15afduEIUY2tb2IAAAsm5tOXpNkGiRXly/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="resume-button">Download Resume</a>
-                </div>
-
-                <!-- Member 3 Card -->
-                <div class="team-card">
-                    <img src="lib/Andy.jpg" alt="Andy Ajeng" class="member-photo">
-                    <h3 class="member-name">Andy Ajeng</h3>
-                    <p class="member-title">Game Developer</p>
-                    
-                    <div class="card-section">
-                        <h4 class="card-subheading">Education</h4>
-                        <p class="card-text"><strong>B.E. in Software Engineering</strong><br>i-CATS University College (2024 - now)</p>
-                    </div>
-
-                    <div class="card-section">
-                        <h4 class="card-subheading">Experience</h4>
-                        <p class="card-text"><strong>Game Developer</strong> self-employed<br><span class="text-sm">4 years - Expertise in LUA Programming Language and 3D Modeling.</span></p>
-                    </div>
-
-                    <a href="https://drive.google.com/file/d/1wdwOLtY7c1-uSw4P0sQdtAgwANpm_7aA/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="resume-button">Download Resume</a>
+        <section class="image-carousel-section fade-in-section">
+             <h2 class="section-heading">Event Gallery</h2>
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="carousel-slide"><img src="lib/MovingPic1.jpg" alt="Gallery image 1"></div>
+                    <div class="carousel-slide"><img src="lib/MovingPic2.jpg" alt="Gallery image 2"></div>
+                    <div class="carousel-slide"><img src="lib/MovingPic3.jpeg" alt="Gallery image 3"></div>
+                    <div class="carousel-slide"><img src="lib/MovingPic4.jpg" alt="Gallery image 4"></div>
+                    <div class="carousel-slide"><img src="lib/MovingPic5.jpg" alt="Gallery image 5"></div>
+                    <div class="carousel-slide"><img src="lib/MovingPic6.jpg" alt="Gallery image 6"></div>
+                    <div class="carousel-slide"><img src="lib/MovingPic7.jpg" alt="Gallery image 7"></div>
+                    <div class="carousel-slide"><img src="lib/MovingPic8.jpeg" alt="Gallery image 8"></div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section fade-in-section">
-            <h2 class="section-heading">Need to know more about us?</h2>
-            <p class="sub-heading">
-                We're always open to discussing new projects, creative ideas, or opportunities to be part of an event. Feel free to reach out to us individually.
-            </p>
-            <div class="contact-info">
-                <div class="contact-person">
-                    <h4>Mitchel Affandi</h4>
-                    <a href="mailto:mitch.affandi22@gmail.com" class="contact-link">mitch.affandi22@gmail.com</a>
-                    <a href="https://www.instagram.com/mtchffnd/" target="_blank" rel="noopener noreferrer" class="social-link">
-                        <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.069-4.85.069s-3.584-.011-4.85-.069c-3.252-.149-4.771-1.664-4.919-4.919-.058-1.265-.069-1.644-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163zm0 1.44c-3.117 0-3.483.01-4.713.067-2.625.12-3.993 1.492-4.112 4.112-.057 1.23-.066 1.59-.066 4.63s.009 3.4.066 4.63c.12 2.625 1.492 3.993 4.112 4.112 1.23.057 1.59.066 4.713.066s3.4-.009 4.63-.066c2.625-.12 3.993-1.492 4.112-4.112.057-1.23.066-1.59.066-4.63s-.009-3.4-.066-4.63c-.12-2.625-1.492-3.993-4.112-4.112-1.23-.057-1.59-.066-4.63-.066zM12 6.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.87a3.735 3.735 0 110-7.47 3.735 3.735 0 010 7.47zM18.365 5.865a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
-                        @mtchffnd
-                    </a>
-                </div>
-                <div class="contact-person">
-                    <h4>Bagas Wisesa</h4>
-                    <a href="mailto:mahardawisesa@gmail.com" class="contact-link">mahardawisesa@gmail.com</a>
-                    <a href="https://www.instagram.com/bagasmaharda/" target="_blank" rel="noopener noreferrer" class="social-link">
-                        <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.069-4.85.069s-3.584-.011-4.85-.069c-3.252-.149-4.771-1.664-4.919-4.919-.058-1.265-.069-1.644-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163zm0 1.44c-3.117 0-3.483.01-4.713.067-2.625.12-3.993 1.492-4.112 4.112-.057 1.23-.066 1.59-.066 4.63s.009 3.4.066 4.63c.12 2.625 1.492 3.993 4.112 4.112 1.23.057 1.59.066 4.713.066s3.4-.009 4.63-.066c2.625-.12 3.993-1.492 4.112-4.112.057-1.23.066-1.59.066-4.63s-.009-3.4-.066-4.63c-.12-2.625-1.492-3.993-4.112-4.112-1.23-.057-1.59-.066-4.63-.066zM12 6.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.87a3.735 3.735 0 110-7.47 3.735 3.735 0 010 7.47zM18.365 5.865a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
-                        @bagasmaharda
-                    </a>
-                </div>
-                <div class="contact-person">
-                    <h4>Andy Ajeng</h4>
-                    <a href="mailto:andyaj2003@gmail.com" class="contact-link">andyaj2003@gmail.com</a>
-                    <a href="https://www.instagram.com/it._.andy/" target="_blank" rel="noopener noreferrer" class="social-link">
-                        <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.069-4.85.069s-3.584-.011-4.85-.069c-3.252-.149-4.771-1.664-4.919-4.919-.058-1.265-.069-1.644-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163zm0 1.44c-3.117 0-3.483.01-4.713.067-2.625.12-3.993 1.492-4.112 4.112-.057 1.23-.066 1.59-.066 4.63s.009 3.4.066 4.63c.12 2.625 1.492 3.993 4.112 4.112 1.23.057 1.59.066 4.713.066s3.4-.009 4.63-.066c2.625-.12 3.993-1.492 4.112-4.112.057-1.23.066-1.59.066-4.63s-.009-3.4-.066-4.63c-.12-2.625-1.492-3.993-4.112-4.112-1.23-.057-1.59-.066-4.63-.066zM12 6.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.87a3.735 3.735 0 110-7.47 3.735 3.735 0 010 7.47zM18.365 5.865a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
-                        @it._.andy
-                    </a>
-                </div>
+        <section class="quiz-section fade-in-section">
+            <div class="quiz-container">
+                <h2 class="section-heading">Test Your GLOW Knowledge!</h2>
+                <form id="quiz-form">
+                    <div class="question-group">
+                        <p>1. What does GLOW stand for?</p>
+                        <ul class="options-list">
+                            <li><label><input type="radio" name="q1" value="a"> Global Learning Opportunity Week</label></li>
+                            <li><label><input type="radio" name="q1" value="b"> Global Learning Week</label></li>
+                            <li><label><input type="radio" name="q1" value="c"> Growing Learning Opportunity Worldwide</label></li>
+                        </ul>
+                    </div>
+                    <div class="question-group">
+                        <p>2. Which country is Prof. Yoshihiro Mizoguchi from?</p>
+                        <ul class="options-list">
+                             <li><label><input type="radio" name="q2" value="a"> South Korea</label></li>
+                             <li><label><input type="radio" name="q2" value="b"> Malaysia</label></li>
+                             <li><label><input type="radio" name="q2" value="c"> Japan</label></li>
+                        </ul>
+                    </div>
+                    <div class="question-group">
+                        <p>3. What is the subject of this GLOW course?</p>
+                        <ul class="options-list">
+                            <li><label><input type="radio" name="q3" value="a"> Cloud Computing</label></li>
+                            <li><label><input type="radio" name="q3" value="b"> Electromagnetics</label></li>
+                            <li><label><input type="radio" name="q3" value="c"> UI/UX Design</label></li>
+                        </ul>
+                    </div>
+                    <button type="submit" class="quiz-submit-btn">See My Score!</button>
+                </form>
+                <div id="quiz-result"></div>
+            </div>
+        </section>
+
+        <section class="map-section fade-in-section">
+            <h2 class="section-heading">Find Us Here</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.307522039233!2d107.6292556758415!3d-6.973007468285575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e9adf177bf8d%3A0x437398556f9fa03!2sTelkom%20University!5e0!3m2!1sen!2sid!4v1720600122553!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer">
         <div class="container footer-content">
-            <p>&copy; Group 2 (MBA). All Rights Reserved.</p>
+            <p>© 2025 Group 2 (MBA). All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- Custom Script -->
     <script src="script.js" defer></script>
 
 </body>

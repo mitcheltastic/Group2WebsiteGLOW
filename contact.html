@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | GLOW 2025</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="container nav-container">
+            <a href="index.html" class="logo"><img src="lib/Logo.png" alt="CC - Class Logo" style="height: 40px;"></a>
+
+            <button id="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Menu</span> <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul id="primary-navigation" class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="https://io.telkomuniversity.ac.id/glow-2025-unlock-a-world-of-knowledge-innovation-and-cultural-discovery-at-telkom-university/" target="_blank" rel="noopener noreferrer" class="nav-link">GLOW Enrollment</a></li>
+                <li><a href="cc-glow.html" class="nav-link">CC-Course-Participant</a></li>
+                <li><a href="our-team.html" class="nav-link">Our Team</a></li>
+                <li><a href="contact.html" class="nav-link contact-link">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container main-content">
+
+        <section class="contact-form-section fade-in-section">
+            <h1 class="main-heading">Get In Touch</h1>
+            <p class="contact-subheading">
+                Have a question or a project in mind? We'd love to hear from you.
+            </p>
+
+            <div class="contact-form-container">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="e.g., John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="e.g., john.doe@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="e.g., +62 812 3456 7890" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    <button type="submit" id="submit-btn" class="submit-button">Send Message</button>
+                </form>
+                <div id="form-status"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>© 2025 Group 2 (MBA). All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>
