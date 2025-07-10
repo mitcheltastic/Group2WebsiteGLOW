@@ -14,7 +14,22 @@
     
 </head>
 <body>
+    <div id="splash-screen">
+        <div class="blob-container">
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <img src="lib/Logo.png" alt="GLOW 2025 Logo" class="splash-logo">
+        </div>
+    </div>
 
+    <svg style="position: absolute; width: 0; height: 0;">
+        <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+    </svg>
     <header class="site-header">
         <nav class="container nav-container">
             <a href="index.html" class="logo"><img src="lib/Logo.png" alt="CC - Class Logo" style="height: 40px;"></a>
@@ -90,11 +105,11 @@
                         </ul>
                     </div>
                     <div class="question-group">
-                        <p>2. Which country is Prof. Yoshihiro Mizoguchi from?</p>
+                        <p>2. Which country is Ts. Puan Rajina Binti M A Raj Mohamed from?</p>
                         <ul class="options-list">
                              <li><label><input type="radio" name="q2" value="a"> South Korea</label></li>
-                             <li><label><input type="radio" name="q2" value="b"> Malaysia</label></li>
-                             <li><label><input type="radio" name="q2" value="c"> Japan</label></li>
+                             <li><label><input type="radio" name="q2" value="b"> U.S.A.</label></li>
+                             <li><label><input type="radio" name="q2" value="c"> Malaysia</label></li>
                         </ul>
                     </div>
                     <div class="question-group">
@@ -112,7 +127,7 @@
         </section>
 
         <section class="map-section fade-in-section">
-            <h2 class="section-heading">Find Us Here</h2>
+            <h2 class="section-heading">Find Us Here!</h2>
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.307522039233!2d107.6292556758415!3d-6.973007468285575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e9adf177bf8d%3A0x437398556f9fa03!2sTelkom%20University!5e0!3m2!1sen!2sid!4v1720600122553!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -122,6 +137,7 @@
 
     <footer class="site-footer">
         <div class="container footer-content">
+            <img src="lib/Logo.png" alt="GLOW 2025 Logo" class="footer-logo">
             <p>© 2025 Group 2 (MBA). All Rights Reserved.</p>
         </div>
     </footer>

@@ -158,3 +158,98 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // This is a modern way to detect when an element enters the screen
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      // If the element is on screen
+      if (entry.isIntersecting) {
+        // Add the .is-visible class to trigger the animation
+        entry.target.classList.add('is-visible');
+      }
+    });
+  });
+
+  // Find the element we want to animate
+  const animatedSection = document.querySelector('.fade-in-section');
+
+  // If the element exists on the page, tell the observer to watch it
+  if (animatedSection) {
+    observer.observe(animatedSection);
+  }
+
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const formStatus = document.getElementById('form-status');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            // Prevent the form from submitting the default way
+            event.preventDefault();
+
+            // Add the 'loading' class and disable the button
+            submitBtn.classList.add('loading');
+            submitBtn.disabled = true;
+
+            // Simulate a 2-second delay for sending the message
+            setTimeout(() => {
+                // Remove the 'loading' class and re-enable the button
+                submitBtn.classList.remove('loading');
+                submitBtn.disabled = false;
+
+                // Show a success message
+                formStatus.classList.add('success');
+                formStatus.textContent = 'Your message has been sent successfully!';
+
+                // Optional: clear the form fields
+                contactForm.reset();
+
+                // Optional: hide the success message after a few seconds
+                setTimeout(() => {
+                    formStatus.classList.remove('success');
+                    formStatus.textContent = '';
+                }, 5000);
+
+            }, 2000);
+        });
+    }
+    
+    // ... your other JavaScript code can go here ...
+
+});
+
+// This function runs as soon as the basic HTML is loaded
+document.addEventListener('DOMContentLoaded', () => {
+
+    const splashScreen = document.getElementById('splash-screen');
+    const blobContainer = document.querySelector('.blob-container');
+    const body = document.body;
+
+    if (splashScreen) {
+        // Prevent scrolling while the splash screen is visible
+        body.classList.add('no-scroll');
+
+        // 1. After 1.5 seconds, trigger the logo reveal
+        setTimeout(() => {
+            if (blobContainer) {
+                blobContainer.classList.add('reveal-logo');
+            }
+        }, 1500); // 1.5 seconds
+
+        // 2. After a total of 2.8 seconds, hide the entire splash screen
+        setTimeout(() => {
+            splashScreen.classList.add('hidden');
+            // Allow scrolling again
+            body.classList.remove('no-scroll');
+        }, 2800); // 2.8 seconds
+    }
+});
+
+// ... your other JavaScript code ...
