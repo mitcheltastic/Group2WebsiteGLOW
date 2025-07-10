@@ -1,10 +1,23 @@
-
 /* === INDEX.CSS === */
-.event-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; }
-@media (min-width: 768px) { .event-layout { grid-template-columns: 1fr 1.5fr; gap: 3rem; } }
+.event-layout { 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 2rem; 
+    align-items: center; 
+}
+
+@media (min-width: 768px) { 
+    .event-layout { 
+        grid-template-columns: 1fr 1.5fr; 
+        gap: 3rem; 
+    } 
+}
+
 .event-poster {
-    width: 100%; border-radius: var(--border-radius);
-    box-shadow: var(--shadow-lg); border: 3px solid var(--brand-primary);
+    width: 100%; 
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg); 
+    border: 3px solid var(--brand-primary);
 }
 
 .lecturer-list {
@@ -13,18 +26,45 @@
     border-left: 3px solid var(--brand-primary);
 }
 
-.carousel-track { display: flex; }
-.carousel-slide { flex: 0 0 50%; padding: 0 10px; }
+.carousel-track { 
+    display: flex; 
+}
+
+.carousel-slide { 
+    flex: 0 0 50%; 
+    padding: 0 10px; 
+}
+
 .carousel-slide img {
-    width: 100%; border-radius: var(--border-radius);
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire area */
+    object-position: center; /* Centers the image in the container */
+    border-radius: var(--border-radius);
     border: 2px solid var(--border-primary);
 }
-@media (min-width: 768px) { .carousel-slide { flex: 0 0 25%; } }
+
+@media (min-width: 768px) { 
+    .carousel-slide { 
+        flex: 0 0 25%; 
+    } 
+}
 
 .quiz-section {
     background-color: var(--bg-secondary);
     padding: 3rem 1.5rem;
     border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    animation: slideIn 0.6s ease-out;
+    text-align: center;
+}
+
+.quiz-section h2 {
+    color: var(--brand-primary);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* A fun font! */
+    animation: bounce 1.2s infinite; /* Make it bounce */
 }
 
 .question-group {
@@ -33,6 +73,35 @@
     padding: 1.5rem;
     border-radius: 0.5rem;
     box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease;
+}
+
+.question-group:hover {
+    transform: scale(1.05); /* Zoom effect */
+    background-color: var(--brand-primary); /* Change background on hover */
+    color: white;
+}
+
+.question-group h3 {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+}
+
+.question-group button {
+    background-color: var(--brand-secondary);
+    color: white;
+    padding: 0.5rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font */
+}
+
+.question-group button:hover {
+    background-color: var(--brand-tertiary); /* Change color on hover */
+    transform: scale(1.1); /* Slightly bigger button on hover */
 }
 
 .map-container {
@@ -50,4 +119,81 @@
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+/* === See My Score Button === */
+.score-button {
+    background: linear-gradient(
+        -45deg, 
+        var(--brand-secondary), 
+        var(--brand-primary), 
+        #ee7752, /* A new fun color */
+        #e73c7e  /* Another new fun color */
+    );
+    background-size: 400% 400%;
+    color: white;
+    padding: 0.8rem 3rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease-in-out;
+    
+    /* Link to our new animation */
+    animation: tempting-gradient 10s ease infinite;
+}
+
+/* Hover Effects */
+.score-button:hover {
+    transform: scale(1.15) translateY(-5px); /* Pop out and lift */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); /* Bigger shadow for more depth */
+    animation-play-state: paused; /* Pause the background animation on hover */
+}
+
+/* Active Button Effect */
+.score-button:active {
+    transform: scale(1.05) translateY(1px); /* Push down effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Focus for Accessibility */
+.score-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5), 0 0 0 7px var(--brand-primary); /* A more prominent glow */
+}
+
+/* === Animations === */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* NEW animation for the button's background */
+@keyframes tempting-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
