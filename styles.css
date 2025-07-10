@@ -276,6 +276,38 @@ section { margin-bottom: 6rem; }
     #mobile-nav-toggle.active .hamburger-line:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
     }
+
+    .main-content {
+    /* Reduces the top/bottom padding of the main section on mobile */
+    padding: 2rem 0;
+    }
+
+    .team-card {
+        /* Reduces the internal padding of each card */
+        padding: 1.25rem;
+    }
+
+    .member-photo {
+        /* Makes the profile pictures smaller */
+        width: 80px;
+        height: 80px;
+        margin-bottom: 1rem; /* Reduces space below the photo */
+    }
+
+    .member-name {
+        /* Slightly reduces the name's font size */
+        font-size: 1.15rem;
+    }
+
+    .column-heading {
+        /* Makes the university titles a bit smaller */
+        font-size: 1.4rem;
+    }
+
+    .container {
+        /* Reduces the side padding on the narrowest screens */
+        padding: 0 1rem;
+    }
 }
 
 /* --- Helper for Screen-Reader Accessibility --- */
@@ -392,8 +424,8 @@ section { margin-bottom: 6rem; }
 }
 
 .fade-in-section {
-    opacity: 0;
-    transform: translateY(30px);
+    opacity: 1;
+    transform: translateY(0);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
