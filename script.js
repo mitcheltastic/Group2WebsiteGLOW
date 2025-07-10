@@ -125,3 +125,17 @@ if (contactForm) {
         }
     });
 }
+
+const navToggle = document.getElementById('mobile-nav-toggle');
+const siteHeader = document.querySelector('.site-header');
+
+// 2. Add an event listener to the button to listen for a 'click'.
+navToggle.addEventListener('click', () => {
+    // 3. When clicked, add or remove the '.nav-open' class on the header.
+    // The CSS uses this class to show or hide the menu.
+    siteHeader.classList.toggle('nav-open');
+
+    // For accessibility, toggle the aria-expanded attribute.
+    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', !isExpanded);
+});

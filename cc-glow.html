@@ -15,13 +15,19 @@
 
     <header class="site-header">
         <nav class="container nav-container">
-           <a href="index.html" class="logo"><img src="lib/Logo.png" alt="CC - Class Logo" style="height: 40px;"></a>
+            <a href="index.html" class="logo"><img src="lib/Logo.png" alt="CC - Class Logo" style="height: 40px;"></a>
+
+            <button id="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Menu</span> <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="https://io.telkomuniversity.ac.id/glow-2025-unlock-a-world-of-knowledge-innovation-and-cultural-discovery-at-telkom-university/" target="_blank" rel="noopener noreferrer" class="nav-link">GLOW Enrollment</a></li>
                 <li><a href="cc-glow.html" class="nav-link">CC-Course-Participant</a></li>
                 <li><a href="our-team.html" class="nav-link">Our Team</a></li>
-                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                <li><a href="contact.html" class="nav-link contact-link">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -39,19 +45,53 @@
                     <div class="team-card">
                         <img src="https://i.ibb.co/3s0CSG9/Andy.jpg" alt="Andy Ajeng" class="member-photo">
                         <h3 class="member-name">Andy Ajeng</h3>
-                        <p class="member-title">Game Developer</p>
                         <div class="card-section">
-                            <h4 class="card-subheading">Education</h4>
-                            <p class="card-text"><strong>B.E. in Software Engineering</strong><br>i-CATS University College (2024 - now)</p>
+                            <h4 class="card-subheading">Birthdate</h4>
+                            <p class="card-text">May 22, 2004</p>
                         </div>
                         <div class="card-section">
-                            <h4 class="card-subheading">Experience</h4>
-                            <p class="card-text"><strong>Game Developer</strong> self-employed<br><span class="text-sm">4 years - Expertise in LUA Programming Language and 3D Modeling.</span></p>
+                            <h4 class="card-subheading">Quote</h4>
+                            <p class="card-text"><em>"Bringing worlds to life, one line of code at a time. The only limit is imagination."</em></p>
                         </div>
-                        <a href="https://drive.google.com/file/d/1wdwOLtY7c1-uSw4P0sQdtAgwANpm_7aA/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="resume-button">Download Resume</a>
                     </div>
-                    
+                    <!-- Additional i-CATS Cards -->
+                    <div class="team-card">
+                        <img src="https://i.ibb.co/3s0CSG9/Andy.jpg" alt="Card 2" class="member-photo">
+                        <h3 class="member-name">John Doe</h3>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Birthdate</h4>
+                            <p class="card-text">April 15, 2002</p>
+                        </div>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Quote</h4>
+                            <p class="card-text"><em>"Innovating solutions for a better tomorrow."</em></p>
+                        </div>
                     </div>
+                    <div class="team-card">
+                        <img src="https://i.ibb.co/3s0CSG9/Andy.jpg" alt="Card 3" class="member-photo">
+                        <h3 class="member-name">Sarah Lee</h3>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Birthdate</h4>
+                            <p class="card-text">February 20, 2003</p>
+                        </div>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Quote</h4>
+                            <p class="card-text"><em>"Tech is the bridge to the future."</em></p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="https://i.ibb.co/3s0CSG9/Andy.jpg" alt="Card 4" class="member-photo">
+                        <h3 class="member-name">Emma Watson</h3>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Birthdate</h4>
+                            <p class="card-text">January 30, 2001</p>
+                        </div>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Quote</h4>
+                            <p class="card-text"><em>"Where there's a code, there's a way."</em></p>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="participant-column">
                     <h2 class="column-heading">Telkom University</h2>
@@ -59,34 +99,139 @@
                     <div class="team-card">
                         <img src="https://i.ibb.co/68Hw1yM/Mitch.jpg" alt="Mitchel Affandi" class="member-photo">
                         <h3 class="member-name">Mitchel Affandi</h3>
-                        <p class="member-title">Backend Developer</p>
                         <div class="card-section">
-                            <h4 class="card-subheading">Education</h4>
-                            <p class="card-text"><strong>B.E. in Telecommunication Engineering</strong><br>Telkom University (2023 - now)</p>
+                            <h4 class="card-subheading">Birthdate</h4>
+                            <p class="card-text">September 10, 2003</p>
                         </div>
                         <div class="card-section">
-                            <h4 class="card-subheading">Experience</h4>
-                            <p class="card-text"><strong>Backend Developer</strong> at BiruLangit<br><span class="text-sm">2 years - Specialized in Backend Development and Databases Integration.</span></p>
+                            <h4 class="card-subheading">Quote</h4>
+                            <p class="card-text"><em>"The best backend is the one you never notice. It just works—seamlessly and efficiently."</em></p>
                         </div>
-                        <a href="https://drive.google.com/file/d/1heiyxq5bs8Tuw9cf-GJFBpcIwPPc2WoI/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="resume-button">Download Resume</a>
                     </div>
 
                     <div class="team-card">
                         <img src="https://i.ibb.co/Fbf2PZs/Bagas.jpg" alt="Bagas Wisesa" class="member-photo">
                         <h3 class="member-name">Bagas Wisesa</h3>
-                        <p class="member-title">GIS Engineer</p>
                         <div class="card-section">
-                            <h4 class="card-subheading">Education</h4>
-                            <p class="card-text"><strong>B.E. in Telecommunication Engineering</strong><br>Telkom University (2023 - now)</p>
+                            <h4 class="card-subheading">Birthdate</h4>
+                            <p class="card-text">January 18, 2004</p>
                         </div>
                         <div class="card-section">
-                            <h4 class="card-subheading">Experience</h4>
-                            <p class="card-text"><strong>GIS Engineer</strong> at MBC Lab<br><span class="text-sm">1 year - working in Mapping & Navigation.</span></p>
+                            <h4 class="card-subheading">Quote</h4>
+                            <p class="card-text"><em>"Mapping the world isn't just about data; it's about understanding the stories our planet tells."</em></p>
                         </div>
-                        <a href="https://drive.google.com/file/d/15afduEIUY2tb2IAAAsm5tOXpNkGiRXly/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="resume-button">Download Resume</a>
                     </div>
-                    
+
+                    <!-- Additional Telkom Cards -->
+                    <div class="team-card">
+                        <img src="https://i.ibb.co/Fbf2PZs/Bagas.jpg" alt="Card 3" class="member-photo">
+                        <h3 class="member-name">Lucas Bastian</h3>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Birthdate</h4>
+                            <p class="card-text">March 5, 2003</p>
+                        </div>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Quote</h4>
+                            <p class="card-text"><em>"Solving problems through logical thinking and innovation."</em></p>
+                        </div>
                     </div>
+                    <div class="team-card">
+                        <img src="https://i.ibb.co/Fbf2PZs/Bagas.jpg" alt="Card 4" class="member-photo">
+                        <h3 class="member-name">Jessica Tan</h3>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Birthdate</h4>
+                            <p class="card-text">October 25, 2002</p>
+                        </div>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Quote</h4>
+                            <p class="card-text"><em>"Tech is the canvas for creativity."</em></p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="https://i.ibb.co/Fbf2PZs/Bagas.jpg" alt="Card 5" class="member-photo">
+                        <h3 class="member-name">Tiffany Wang</h3>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Birthdate</h4>
+                            <p class="card-text">December 12, 2001</p>
+                        </div>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Quote</h4>
+                            <p class="card-text"><em>"Coding is the art of making the impossible happen."</em></p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="https://i.ibb.co/Fbf2PZs/Bagas.jpg" alt="Card 6" class="member-photo">
+                        <h3 class="member-name">Chris Yulian</h3>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Birthdate</h4>
+                            <p class="card-text">August 14, 2004</p>
+                        </div>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Quote</h4>
+                            <p class="card-text"><em>"Technology is the backbone of innovation."</em></p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="https://i.ibb.co/Fbf2PZs/Bagas.jpg" alt="Card 7" class="member-photo">
+                        <h3 class="member-name">Nina Sari</h3>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Birthdate</h4>
+                            <p class="card-text">February 7, 2003</p>
+                        </div>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Quote</h4>
+                            <p class="card-text"><em>"Innovation is the key to unlocking the future."</em></p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="https://i.ibb.co/Fbf2PZs/Bagas.jpg" alt="Card 8" class="member-photo">
+                        <h3 class="member-name">Adam Martin</h3>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Birthdate</h4>
+                            <p class="card-text">April 19, 2002</p>
+                        </div>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Quote</h4>
+                            <p class="card-text"><em>"Empowering ideas with technology."</em></p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="https://i.ibb.co/Fbf2PZs/Bagas.jpg" alt="Card 9" class="member-photo">
+                        <h3 class="member-name">Rafael Santoso</h3>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Birthdate</h4>
+                            <p class="card-text">March 8, 2003</p>
+                        </div>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Quote</h4>
+                            <p class="card-text"><em>"Tech and creativity, a perfect combination."</em></p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="https://i.ibb.co/Fbf2PZs/Bagas.jpg" alt="Card 10" class="member-photo">
+                        <h3 class="member-name">Zara Aulia</h3>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Birthdate</h4>
+                            <p class="card-text">November 22, 2002</p>
+                        </div>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Quote</h4>
+                            <p class="card-text"><em>"Building the future, one line at a time."</em></p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="https://i.ibb.co/Fbf2PZs/Bagas.jpg" alt="Card 11" class="member-photo">
+                        <h3 class="member-name">Fiona Grace</h3>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Birthdate</h4>
+                            <p class="card-text">July 25, 2004</p>
+                        </div>
+                        <div class="card-section">
+                            <h4 class="card-subheading">Quote</h4>
+                            <p class="card-text"><em>"Coding is not just a skill; it’s an art."</em></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
