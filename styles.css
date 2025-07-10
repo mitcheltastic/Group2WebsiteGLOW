@@ -770,3 +770,103 @@ textarea {
     /* Set a specific height for the logo in the footer */
     height: 30px;
 }
+
+/* =========================================
+|   LOGO REVEAL SPLASH SCREEN STYLES      |
+=========================================== */
+
+/* Prevent scrolling while splash screen is active */
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* The main splash screen container */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-secondary);
+    display: grid;
+    place-items: center;
+    z-index: 9999;
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#splash-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* The container for our blobs and logo */
+.blob-container {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    filter: url(#goo);
+    animation: bounce 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.2s forwards;
+    transition: transform 0.8s cubic-bezier(0.5, 0, 0.75, 0), opacity 0.8s ease;
+}
+
+/* --- KEY CHANGE 2: Rule to make the logo shrink during the final fade-out. --- */
+#splash-screen.hidden .blob-container {
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+/* The individual blobs */
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--brand-primary);
+    /* Add a transition for the hide effect */
+    transition: all 0.6s cubic-bezier(0.55, 0, 0.45, 1);
+}
+
+.blob:nth-child(1) {
+    width: 80px; height: 80px; top: 20%; left: 20%;
+}
+.blob:nth-child(2) {
+    width: 60px; height: 60px; top: 60%; left: 60%;
+}
+.blob:nth-child(3) {
+    width: 70px; height: 70px; top: 30%; left: 70%;
+}
+
+/* The new logo inside the splash screen */
+.splash-logo {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    width: 110px; /* Adjust size as needed */
+    z-index: 1000;
+    height: auto;
+    opacity: 0; /* Hidden by default */
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: opacity 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s;
+}
+
+/* --- The Reveal Animation State --- */
+
+/* When this class is added, the blobs will disappear */
+.blob-container.reveal-logo .blob {
+    transform: scale(0);
+    opacity: 0;
+}
+
+/* When this class is added, the logo will appear */
+.blob-container.reveal-logo .splash-logo {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+/* Main bounce animation for the whole container */
+@keyframes bounce {
+    0%   { transform: translateY(-200%); }
+    80%  { transform: translateY(0); }
+    90%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+

@@ -224,3 +224,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // ... your other JavaScript code can go here ...
 
 });
+
+// This function runs as soon as the basic HTML is loaded
+document.addEventListener('DOMContentLoaded', () => {
+
+    const splashScreen = document.getElementById('splash-screen');
+    const blobContainer = document.querySelector('.blob-container');
+    const body = document.body;
+
+    if (splashScreen) {
+        // Prevent scrolling while the splash screen is visible
+        body.classList.add('no-scroll');
+
+        // 1. After 1.5 seconds, trigger the logo reveal
+        setTimeout(() => {
+            if (blobContainer) {
+                blobContainer.classList.add('reveal-logo');
+            }
+        }, 1500); // 1.5 seconds
+
+        // 2. After a total of 2.8 seconds, hide the entire splash screen
+        setTimeout(() => {
+            splashScreen.classList.add('hidden');
+            // Allow scrolling again
+            body.classList.remove('no-scroll');
+        }, 2800); // 2.8 seconds
+    }
+});
+
+// ... your other JavaScript code ...

@@ -14,7 +14,22 @@
     
 </head>
 <body>
+    <div id="splash-screen">
+        <div class="blob-container">
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <img src="lib/Logo.png" alt="GLOW 2025 Logo" class="splash-logo">
+        </div>
+    </div>
 
+    <svg style="position: absolute; width: 0; height: 0;">
+        <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+    </svg>
     <header class="site-header">
         <nav class="container nav-container">
             <a href="index.html" class="logo"><img src="lib/Logo.png" alt="CC - Class Logo" style="height: 40px;"></a>
