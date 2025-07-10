@@ -1,0 +1,16 @@
+/* === PARTICIPANTS.CSS === */
+.participants-container, .team-grid { display: grid; gap: 2rem; }
+@media (min-width: 768px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) {
+    .team-grid { grid-template-columns: repeat(3, 1fr); }
+    .participants-container { grid-template-columns: 1fr 1fr; }
+}
+
+.column-heading {
+    font-size: 1.75rem;
+    text-align: center;
+    border-bottom: 2px solid var(--border-primary);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    color: var(--brand-primary);
+}

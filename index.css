@@ -1,0 +1,53 @@
+
+/* === INDEX.CSS === */
+.event-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; }
+@media (min-width: 768px) { .event-layout { grid-template-columns: 1fr 1.5fr; gap: 3rem; } }
+.event-poster {
+    width: 100%; border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg); border: 3px solid var(--brand-primary);
+}
+
+.lecturer-list {
+    list-style: none;
+    padding-left: 1rem;
+    border-left: 3px solid var(--brand-primary);
+}
+
+.carousel-track { display: flex; }
+.carousel-slide { flex: 0 0 50%; padding: 0 10px; }
+.carousel-slide img {
+    width: 100%; border-radius: var(--border-radius);
+    border: 2px solid var(--border-primary);
+}
+@media (min-width: 768px) { .carousel-slide { flex: 0 0 25%; } }
+
+.quiz-section {
+    background-color: var(--bg-secondary);
+    padding: 3rem 1.5rem;
+    border-radius: var(--border-radius);
+}
+
+.question-group {
+    margin-bottom: 1.5rem;
+    background-color: var(--bg-primary);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-md);
+}
+
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
