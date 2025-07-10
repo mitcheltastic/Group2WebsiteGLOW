@@ -665,3 +665,108 @@ textarea {
             width: 100%;
             max-width: 400px; /* Adjust the max-width as needed */
 }
+
+/* =========================================
+|   DESKTOP SCROLL ANIMATION              |
+=========================================== */
+
+@media (min-width: 769px) {
+  /*
+    This sets the initial "hidden" state for our content section.
+    It will be invisible and slightly moved down.
+  */
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  /*
+    When JavaScript adds the .is-visible class, the section
+    will fade in and slide up to its final position.
+  */
+  .fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-heading {
+    background: linear-gradient(120deg, #2980b9, #85c1e9, #3498db);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid var(--text-secondary);
+    color: transparent;
+    animation:
+        typing 3s steps(35, end),
+        blink-caret .75s step-end infinite;
+    animation-fill-mode: forwards;
+    width: 0;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--text-secondary); }
+}
+
+/* =========================================
+|   SUBMIT BUTTON LOADER                  |
+=========================================== */
+
+/* The loader is a spinning circle, hidden by default */
+.button-loader {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    border-left-color: #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* The 'spin' animation for the loader */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* This is what happens when the button is loading */
+.submit-button.loading .button-text {
+    display: none; /* Hide the "Send Message" text */
+}
+
+.submit-button.loading .button-loader {
+    display: block; /* Show the spinning loader */
+}
+
+/* Make sure the loader is centered */
+.submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================================
+|   FOOTER LOGO STYLES                    |
+=========================================== */
+
+.footer-content {
+    /* Use Flexbox to easily align items */
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center;    /* Center items vertically */
+    gap: 1rem;              /* Add space between the logo and the text */
+}
+
+.footer-logo {
+    /* Set a specific height for the logo in the footer */
+    height: 30px;
+}

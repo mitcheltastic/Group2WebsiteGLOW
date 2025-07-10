@@ -37,28 +37,31 @@
         <section class="contact-form-section fade-in-section">
             <h1 class="main-heading">Get In Touch</h1>
             <p class="contact-subheading">
-                Have a question or a project in mind? We'd love to hear from you.
+                Have anything you'd like to say? Drop it down below
             </p>
 
             <div class="contact-form-container">
                 <form id="contact-form">
                     <div class="form-group">
                         <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="e.g., John Doe" required>
+                        <input type="text" id="name" name="name" placeholder="e.g., Andy Ajeng" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="e.g., john.doe@example.com" required>
+                        <input type="email" id="email" name="email" placeholder="e.g., andyaj2003@gmail.com" required>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="e.g., +62 812 3456 7890" required>
+                        <input type="tel" id="phone" name="phone" placeholder="e.g., +608080808080" required>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
                     </div>
-                    <button type="submit" id="submit-btn" class="submit-button">Send Message</button>
+                    <button type="submit" id="submit-btn" class="submit-button">
+                        <span class="button-text">Send Message</span>
+                        <span class="button-loader"></span>
+                    </button>
                 </form>
                 <div id="form-status"></div>
             </div>
@@ -68,6 +71,7 @@
 
     <footer class="site-footer">
         <div class="container footer-content">
+            <img src="lib/Logo.png" alt="GLOW 2025 Logo" class="footer-logo">
             <p>© 2025 Group 2 (MBA). All Rights Reserved.</p>
         </div>
     </footer>
