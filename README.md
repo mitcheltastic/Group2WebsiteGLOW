@@ -82,7 +82,7 @@ Let me know if you'd like me to:
 
 - Personalize contributor names from image metadata
 - Add actual screenshots or embed them
-- Turn this into a downloadable `README.md` file ​:contentReference[oaicite:0]{index=0}​
+- Turn this into a downloadable `README.md` 
 
 
 
